@@ -20,15 +20,15 @@ export class CommonService {
   }
 
   getExperiences() {
-    return this.http.get(this.baseUrl + 'experiences');
+    return this.http.get(this.baseUrl + '/experiences');
   }
 
   getProjects() {
-    return this.http.get(this.baseUrl + 'projects');
+    return this.http.get(this.baseUrl + '/projects');
   }
 
   sendContact(contact: any) {
-    return this.http.post<any>(this.baseUrl + 'contact', contact, httpOptions).subscribe(data => {
+    return this.http.post<any>(this.baseUrl + '/contact', contact, httpOptions).subscribe(data => {
 
     });
   }
