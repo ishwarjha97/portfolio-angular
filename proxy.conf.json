@@ -1,6 +1,6 @@
 {
     "/server": {
-        "target": "http://localhost:8081",
+        "target": "https://portfolio-spring.herokuapp.com",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug",
