@@ -748,7 +748,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-transform: translate3d(0, 15px, 0);
   transform: translate3d(0, 15px, 0);
 }
-@media screen and (pointer: fine) {
+@media screen and (pointer: fine) and (max-width: 480px) {
   .work .desc {
     opacity: 1;
     background: rgba(255, 255, 255, 0.6);
@@ -1330,3 +1330,7 @@ input[type="text"] {
   transition: 0s 0.2s ease-in-out;
 }
 
+.success-msg {
+  color: #270;
+  background-color: #DFF2BF;
+}

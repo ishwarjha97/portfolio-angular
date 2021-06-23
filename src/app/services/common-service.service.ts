@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 
 
@@ -27,9 +28,9 @@ export class CommonService {
     return this.http.get(this.baseUrl + '/projects');
   }
 
-  sendContact(contact: any) {
+  sendContact(contact: NgForm) {
     return this.http.post<any>(this.baseUrl + '/contact', contact, httpOptions).subscribe(data => {
-
+      
     });
   }
 }

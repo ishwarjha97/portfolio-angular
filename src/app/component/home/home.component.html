@@ -295,7 +295,7 @@
 					</a>
 				</div>
 				<div class="col-md-3 col-md-offset-2 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(assets/images/SpringRest.png);">
+					<a href="https://github.com/ishwarjha97/lab-research" class="work"  target="_blank" style="background-image: url(assets/images/SpringRest.png);">
 						<div class="desc">
 							<h3>Levenshtein Distance Application</h3>
 							<span>Spring Boot, Rest API</span>
@@ -313,42 +313,46 @@
 		</div>
 		<div class="choose animate-box">
 			<h2>Contact</h2>
-			<form #userlogin="ngForm" (ngSubmit)="onContactSubmit(userlogin.value)">
+			<form #userlogin="ngForm" (ngSubmit)="onContactSubmit(userlogin)">
 				<div class="row form-group">
 					<div class="col-md-6">
 						<input name="fname" type="text" id="fname" class="form-control" placeholder="Your firstname"
-							ngModel>
+							required ngModel>
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-md-6">
 						<input name="lname" type="text" id="lname" class="form-control" placeholder="Your lastname"
-							ngModel>
+							required ngModel>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
 						<input name="email" type="text" id="email" class="form-control" placeholder="Your email address"
-							ngModel>
+							required ngModel email="true">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input name="subject" type="text" id="subject" class="form-control"
+						<input name="subject" type="text" id="subject" class="form-control" required
 							placeholder="Your subject of this message" ngModel>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control"
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" required
 							placeholder="Say something about me" ngModel></textarea>
 					</div>
 				</div>
 				<div class="form-group">
 					<input type="submit" value="Send Message" class="btn btn-primary">
+					<div class="success-msg" *ngIf="sent">
+						<i class="fa fa-check"></i>
+						Mail Sent
+					</div>
 				</div>
 
 			</form>

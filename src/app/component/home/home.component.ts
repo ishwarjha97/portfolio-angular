@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { CommonService } from 'src/app/services/common-service.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit {
   public about: any;
   public experiences: any;
   public projects: any;
+  public sent = false;
 
   constructor(private commonService: CommonService) { }
 
@@ -56,7 +58,13 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  onContactSubmit(event: any) {
+  onContactSubmit(event: NgForm) {
+    this.sent = false;
     this.commonService.sendContact(event);
+    event.resetForm();
+    this.sent = true;
+    setTimeout(() => {
+      this.sent = false;
+    }, 2000);
   }
 }
