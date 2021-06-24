@@ -33,7 +33,6 @@
               "src/app/component/home/css/flexslider.css",
               "src/app/component/home/css/icomoon.css",
               "src/app/component/home/css/style.css"
-                       
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -115,6 +114,10 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
