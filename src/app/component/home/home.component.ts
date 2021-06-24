@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
       data => {
         if (data) {
           this.about = data;
-          this.check(this.about);
         }
       },
       err => console.error(err)
@@ -41,14 +40,10 @@ export class HomeComponent implements OnInit {
         data => {
           if (data) {
             this.experiences = data;
-            this.check(this.experiences);
           }
         },
         err => console.error(err)
       );
-  }
-  check(v: any) {
-    console.log(v);
   }
 
   getProjects() {
