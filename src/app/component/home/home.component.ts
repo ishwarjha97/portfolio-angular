@@ -1,11 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CommonService } from 'src/app/services/common-service.service';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
+})
+@Injectable({
+  providedIn: 'root'
 })
 export class HomeComponent implements OnInit {
 
