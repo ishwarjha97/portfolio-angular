@@ -28,7 +28,7 @@ export class CommonService {
     return this.http.get(this.baseUrl + '/projects');
   }
 
-  sendContact(contact: NgForm) {
+  sendContact(contact: any) {
     return this.http.post<any>(this.baseUrl + '/contact', contact, httpOptions).subscribe(data => {
       
     });

@@ -1,5 +1,5 @@
 import { Component, Injectable, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, NgForm, Validators } from '@angular/forms';
 import { CommonService } from 'src/app/services/common-service.service';
 
 
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   public experiences: any;
   public projects: any;
   public sent = false;
-
+ 
   constructor(private commonService: CommonService) { }
 
   ngOnInit(): void {
@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
 
   onContactSubmit(event: NgForm) {
     this.sent = false;
-    this.commonService.sendContact(event);
+    this.commonService.sendContact(event.value);
     event.resetForm();
     this.sent = true;
     setTimeout(() => {
