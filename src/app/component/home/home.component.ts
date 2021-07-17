@@ -32,11 +32,12 @@ export class HomeComponent implements OnInit {
       data => {
         if (data) {
           this.about = data;
+          this.aboutSpinner = false;
         }
       },
       err => console.error(err)
     );
-    this.aboutSpinner = false;
+    
   }
 
 
