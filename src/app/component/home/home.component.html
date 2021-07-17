@@ -93,8 +93,8 @@
 						</li>
 						<li><span class="first-block">Phone:</span><span class="second-block">+917666159150</span>
 						</li>
-						<li><span class="first-block">Email:</span><a href="mailto:ishwarjha10@gmail.com" target="_blank" ><span
-								class="second-block" >ishwarjha10@gmail.com</span></a></li>
+						<li><span class="first-block">Email:</span><a href="mailto:ishwarjha10@gmail.com"
+								target="_blank"><span class="second-block">ishwarjha10@gmail.com</span></a></li>
 						<!-- <li><span class="first-block">Website:</span><span class="second-block">www.yoursite.com</span></li> -->
 						<li><span class="first-block">Address:</span><span class="second-block">Mumbai, India</span>
 						</li>
@@ -103,6 +103,10 @@
 				<div class="col-md-8">
 
 					<h2>Hello There!</h2>
+					<div *ngIf="aboutSpinner">
+						<mat-spinner [diameter]="20">
+						</mat-spinner>
+					</div>
 					<p>{{about?.aboutMe}}</p>
 					<p>
 					<ul class="fh5co-social-icons">
@@ -287,7 +291,8 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 col-md-offset-2 text-center col-padding animate-box">
-					<a href="https://github.com/ishwarjha97/portfolio-angular" class="work" target="_blank" style="background-image: url(assets/images/portfolioProject.png);">
+					<a href="https://github.com/ishwarjha97/portfolio-angular" class="work" target="_blank"
+						style="background-image: url(assets/images/portfolioProject.png);">
 						<div class="desc">
 							<h3>portfolio</h3>
 							<span>Spring Boot & Angular</span>
@@ -359,7 +364,7 @@
 				<div class="row form-group">
 					<div class="col-md-12">
 						<textarea name="message" id="message" cols="30" rows="10" class="form-control" required
-							placeholder="Say something about me"  #message="ngModel" ngModel></textarea>
+							placeholder="Say something about me" #message="ngModel" ngModel></textarea>
 						<div [hidden]="message.valid || message.pristine" class="alert alert-danger">
 							Message is required
 						</div>

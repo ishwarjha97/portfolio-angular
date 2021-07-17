@@ -1334,3 +1334,8 @@ input[type="text"] {
   color: #270;
   background-color: #DFF2BF;
 }
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #3fb53f;
+  
+}

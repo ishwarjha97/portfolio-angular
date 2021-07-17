@@ -7,11 +7,12 @@ import { CommonService } from './services/common-service.service';
 import { HomeComponent } from './component/home/home.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +20,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatProgressSpinnerModule
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   public experiences: any;
   public projects: any;
   public sent = false;
- 
+  public aboutSpinner = false;
   constructor(private commonService: CommonService) { }
 
   ngOnInit(): void {
@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
   getAbout() {
+    this.aboutSpinner = true;
     this.commonService.getAbout().subscribe(
       data => {
         if (data) {
@@ -35,6 +36,7 @@ export class HomeComponent implements OnInit {
       },
       err => console.error(err)
     );
+    this.aboutSpinner = false;
   }
 
 
